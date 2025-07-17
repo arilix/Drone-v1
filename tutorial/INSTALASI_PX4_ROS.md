@@ -21,14 +21,18 @@ sudo apt install git -y [cite: 1]
 git clone https://github.com/PX4/PX4-Autopilot.git --recursive [cite: 1]
 
 # Masuk ke direktori dan jalankan skrip setup Ubuntu
+
 cd PX4-Autopilot [cite: 1]
+
 bash ./Tools/setup/ubuntu.sh --no-nuttx --no-sim-toolchain [cite: 1]
 
 Langkah 3: Kompilasi dan Menjalankan Simulasi (SITL)
 Proses ini akan mengompilasi firmware PX4 untuk simulasi (SITL) dan menjalankannya di simulator Gazebo.
 
 # Pastikan Anda berada di dalam folder ~/PX4-Autopilot
+
 cd ~/PX4-Autopilot [cite: 1]
+
 make px4_sitl_default gazebo [cite: 1]
 
 Setelah perintah ini dijalankan, jendela Gazebo akan terbuka dan menampilkan model drone. Biarkan ini tetap berjalan.
@@ -37,9 +41,13 @@ Langkah 4: Instalasi Dataset Geoid (Opsional) (terminal baru 2)
 Langkah ini hanya diperlukan jika proses kompilasi gagal karena dataset geoid tidak lengkap. Jika simulasi Anda sudah berjalan, Anda bisa melewati langkah ini.
 
 cd ~/Downloads [cite: 1]
+
 wget https://downloads.sourceforge.net/project/geographiclib/geoids-distrib/egm96-5.tar.bz2 [cite: 1]
+
 tar -xjvf egm96-5.tar.bz2 [cite: 1]
+
 sudo mkdir -p /usr/share/GeographicLib/geoids [cite: 1]
+
 sudo mv geoids/egm96-5.pgm /usr/share/GeographicLib/geoids/ [cite: 1]
 
 Langkah 5: Menghubungkan Simulasi ke ROS (terminal baru 2)
