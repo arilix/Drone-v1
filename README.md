@@ -8,14 +8,16 @@ ROS Noetic sudah terinstal.
 
 Langkah 1: Instalasi MAVROS
 MAVROS adalah jembatan yang menghubungkan antara protokol MAVLink (yang digunakan oleh PX4) dengan ROS.
-
+'''bash
 sudo apt install ros-noetic-mavros ros-noetic-mavros-extras -y [cite: 1]
-
+''''
 Langkah 2: Download PX4 dan Dependensinya
 Langkah ini akan mengunduh kode sumber PX4 dari GitHub dan menginstal semua perangkat lunak yang dibutuhkan untuk kompilasi dan simulasi.
 
 # Instal Git jika belum ada
+'''bash
 sudo apt install git -y [cite: 1]
+'''
 
 # Clone repositori PX4 beserta submodulnya
 git clone https://github.com/PX4/PX4-Autopilot.git --recursive [cite: 1]
