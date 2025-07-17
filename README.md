@@ -4,7 +4,7 @@ Langkah 2: Unduh PX4 dan Instal DependensiLangkah ini akan mengunduh kode sumber
 sudo apt install git -y
 
 # Clone repositori PX4 beserta submodulnya (proses ini mungkin memakan waktu)
-git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+git clone [https://github.com/PX4/PX4-Autopilot.git](https://github.com/PX4/PX4-Autopilot.git) --recursive
 
 # Masuk ke direktori dan jalankan skrip setup Ubuntu
 cd PX4-Autopilot
@@ -18,7 +18,7 @@ Setelah perintah ini selesai, jendela Gazebo akan terbuka dan menampilkan model 
 cd ~/Downloads
 
 # Unduh dataset EGM96
-wget https://downloads.sourceforge.net/project/geographiclib/geoids-distrib/egm96-5.tar.bz2
+wget [https://downloads.sourceforge.net/project/geographiclib/geoids-distrib/egm96-5.tar.bz2](https://downloads.sourceforge.net/project/geographiclib/geoids-distrib/egm96-5.tar.bz2)
 
 # Ekstrak file
 tar -xjvf egm96-5.tar.bz2
