@@ -110,8 +110,20 @@ Jika berhasil, Anda akan melihat status `connected: True` berulang kali. Jika su
 
 Setelah semua terhubung, Anda siap untuk memberikan perintah kepada drone menggunakan skrip Python kustom Anda.
 
-> **Terminal:** Buka terminal baru terakhir.
+> **Terminal:** Buka terminal baru .
 
 ```bash
 # Pastikan skrip terbang.py berada di direktori yang sama, atau berikan path lengkapnya
 python3 terbang.py
+```
+
+### Langkah 8: Jalankan Skrip teleop
+
+Setelah semua terhubung, Anda siap untuk memberikan perintah kepada drone menggunakan remote dari skrip Python kustom Anda.
+
+> **Terminal:** Buka terminal baru terakhir.
+
+```bash
+# Pastikan skrip terbang.py sudah berjalan
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/mavros/setpoint_velocity/cmd_vel_unstamped
+```
